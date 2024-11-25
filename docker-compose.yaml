@@ -24,7 +24,7 @@ services:
   #   image: nodeapp:latest
   #   environment:
   #     MYSQL_USERNAME: root
-  #     MYSQL_ROOT_PASSWORD: "redhat"
+  #     MYSQL_ROOT_PASSWORD: redhat
   #     MYSQL_DATABASE: student_info
   #     MYSQL_HOST: mysql
   #   ports:
