@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD: redhat
-      - MYSQL_DATABASE="student_info
+      - MYSQL_DATABASE: student_info
     ports:
       - 3306:3306
     # volumes:
