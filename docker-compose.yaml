@@ -3,8 +3,8 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      - MYSQL_ROOT_PASSWORD: redhat
-      - MYSQL_DATABASE: student_info
+      - MYSQL_ROOT_PASSWORD="redhat"
+      - MYSQL_DATABASE="student_info"
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
@@ -14,7 +14,7 @@ services:
   pma:
     image: phpmyadmin:latest
     environment:
-      PMA_HOST: mysql 
+      PMA_HOST="mysql" 
     networks:
       - node_nw
     ports:
