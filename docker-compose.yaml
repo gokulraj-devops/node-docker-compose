@@ -5,10 +5,10 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD: redhat
       - MYSQL_DATABASE: student_info
+    volumes:
+      - mysql_data:/var/lib/mysql
     ports:
       - 3306:3306
-    # volumes:
-    #   - database:/var/lib/mysql
     networks:
       - node_nw
   pma:
@@ -19,24 +19,9 @@ services:
       - node_nw
     ports:
       - 80:80
-
-  # node_app:
-  #   image: nodeapp:latest
-  #   environment:
-  #     MYSQL_USERNAME: root
-  #     MYSQL_ROOT_PASSWORD: redhat
-  #     MYSQL_DATABASE: student_info
-  #     MYSQL_HOST: mysql
-  #   ports:
-  #     - 3000:3000
-    
-    # networks:
-    #   - node_nw
-
-
-# volumes:
-  # database:
-
+ 
 networks:
   node_nw:
-    
+
+volumes:
+  mysql_data:
